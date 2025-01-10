@@ -1,6 +1,6 @@
-FROM emscripten/emsdk:3.1.46 AS wasm-builder
+FROM emscripten/emsdk:3.1.74 AS wasm-builder
 
-RUN git clone --depth=1 --branch=php-8.2.10 https://github.com/php/php-src
+RUN git clone --depth=1 --branch=php-8.4.2 https://github.com/php/php-src
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -65,7 +65,7 @@ RUN emcc \
     ;
 
 
-FROM node:20.7
+FROM node:22.13
 
 WORKDIR /app
 COPY --from=wasm-builder /src/php-wasm.js /app/php-wasm.mjs
