@@ -15,9 +15,7 @@ int EMSCRIPTEN_KEEPALIVE php_wasm_run(const char* code) {
 
     PHP_EMBED_END_BLOCK();
 
-    fprintf(stdout, "\n");
     fflush(stdout);
-    fprintf(stderr, "\n");
     fflush(stderr);
 
     return result == SUCCESS ? 0 : 1;

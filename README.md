@@ -8,13 +8,13 @@ Article about this repo (Japanese): https://blog.nsfisis.dev/posts/2023-10-02/co
 ## Build
 
 ```
-$ docker build -t php-wasm .
+$ docker build -t tiny-php.wasm .
 ```
 
 ## Run
 
 ```
-$ echo 'echo "Hello, World!", PHP_EOL;' | docker run --rm -i php-wasm
+$ echo 'echo "Hello, World!", PHP_EOL;' | docker run --rm -i tiny-php.wasm
 ```
 
 ## License
