@@ -1,4 +1,4 @@
-FROM emscripten/emsdk:3.1.74 AS wasm-builder
+FROM emscripten/emsdk:5.0.1 AS wasm-builder
 
 RUN git clone --depth=1 --branch=php-8.4.2 https://github.com/php/php-src
 
