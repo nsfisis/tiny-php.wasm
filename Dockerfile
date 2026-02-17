@@ -1,6 +1,6 @@
 FROM emscripten/emsdk:5.0.1 AS wasm-builder
 
-RUN git clone --depth=1 --branch=php-8.4.2 https://github.com/php/php-src
+RUN git clone --depth=1 --branch=php-8.5.3 https://github.com/php/php-src
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
